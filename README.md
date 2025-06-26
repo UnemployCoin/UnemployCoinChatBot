@@ -7,7 +7,7 @@ This lightweight assistant runs entirely in the browser and provides real-time a
 
 ## 🚀 Live Site
 
-👉 [Launch the ChatBot](https://unemploycoin.github/UnemployCoinChatBot/)
+👉 [Launch the ChatBot](https://unemploycoin.com/UnemployCoinChatBot/)
 
 ---
 
