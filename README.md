@@ -1,6 +1,6 @@
 # 🧠 UnemployCoinChatBot
 
-The official AI-powered chatbot for [UnemployCoin](https://unemploycoin.com).  
+The official chatbot for [UnemployCoin](https://unemploycoin.com).  
 This lightweight assistant runs entirely in the browser and provides real-time answers about the UnemployCoin project, including its mission, roadmap, tokenomics, and future plans.
 
 ---
