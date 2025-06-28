@@ -1,7 +1,8 @@
 const unemploycoinKnowledge = [
+  // 🧠 Core project info
   {
     keywords: ["what is unemploycoin", "about", "project"],
-    response: "UnemployCoin is a decentralized crypto initiative focused on empowering unemployed, underrepresented, and independent creators. It’s both a blockchain project and a growing community movement."
+    response: "UnemployCoin is crypto for people who were told they have 'no experience.' We're building a decentralized ecosystem from scratch — no VC, no shill, just skill."
   },
   {
     keywords: ["tokenomics", "supply", "how many coins", "total supply"],
@@ -9,7 +10,7 @@ const unemploycoinKnowledge = [
   },
   {
     keywords: ["who created", "creator", "founder"],
-    response: "UnemployCoin was created by a solo developer known online as MasterNeo while unemployed, with the mission of turning technical skills into real-world opportunity and helping others do the same."
+    response: "UnemployCoin was created by a solo developer known online as iMasterNeo while unemployed, with the mission of turning technical skills into real-world opportunity and helping others do the same."
   },
   {
     keywords: ["is this a meme", "meme coin", "serious"],
@@ -45,11 +46,11 @@ const unemploycoinKnowledge = [
   },
   {
     keywords: ["updates", "news", "what's new"],
-    response: "📰 Latest Updates:\n- ChatBot launched at https://unemploycoin.com/UnemployCoinChatBot/\n- Blockchain source rebranded and running\n- Community growth starting — follow @unemploycoin on X"
+    response: "📰 Latest Updates:\n- ChatBot launched at https://unemploycoin.com/UnemployCoinChatBot/\n- Blockchain source rebranded and running\n- Community growth starting — follow @imasterneo on X"
   },
   {
     keywords: ["contact", "reach", "support"],
-    response: "For now, contact is direct via @UnemployCoin on Twitter/X or through GitHub issues at https://github.com/UnemployCoin."
+    response: "For now, contact is direct via @imasterneo on Twitter/X or through GitHub issues at https://github.com/UnemployCoin."
   },
   {
     keywords: ["why unemploycoin", "purpose", "vision"],
@@ -78,66 +79,26 @@ const unemploycoinKnowledge = [
   {
     keywords: ["broke", "poor", "unemployed"],
     response: "Same here, that’s why we made our own currency. 🫡"
-   },
-   {
+  },
+  {
     keywords: ["gm", "gn", "good morning", "good night"],
     response: "gm to the grinders ☕ gn to the dreamers 🌙 and big ups to the unemployed legends building in both."
-   },
-   {
+  },
+  { 
     keywords: ["rekt", "down bad", "lost money"],
     response: "You’re not down bad — you’re just early in your character arc. 📉➡️📈"
-},
-{
-  keywords: ["wtf", "what is this", "bruh", "lol"],
-  response: "UnemployCoin: the only project that’s unhireable on paper but unstoppable in execution."
-},
-{
-  keywords: ["pump", "moon", "when moon", "to the moon"],
-  response: "We don’t promise moonshots — but we do shoot for respect, results, and a little rebellion 🚀"
-},
-{
-  keywords: ["this sucks", "lame", "trash", "boring"],
-  response: "Your opinion is valid and has been filed under 🗑️ /dev/null. Have a better day. 😄"
-},
-{
-  keywords: ["hi", "hello", "hey", "yo", "wassup"],
-  response: "Hey there 👋! Welcome to UnemployCoin Chat — where every reply is a resume builder."
-},
-{
-  keywords: ["you real", "are you real", "are you ai"],
-  response: "I'm as real as your last paycheck — but a bit more responsive. 😉"
-},
-{
-  keywords: ["joke", "tell me a joke", "funny"],
-  response: "Why did the dev go broke?\nBecause he used all his cache 💸"
-},
-{
-  keywords: ["rugpull", "scam", "is this legit"],
-  response: "If this were a rugpull, I’d be answering you from a yacht — instead, I’m hosted on GitHub Pages."
-},
-{
-  keywords: ["broke", "poor", "unemployed"],
-  response: "Same here, that’s why we made our own currency. 🫡"
-},
-{
-  keywords: ["gm", "gn", "good morning", "good night"],
-  response: "gm to the grinders ☕ gn to the dreamers 🌙 and big ups to the unemployed legends building in both."
-},
-{
-  keywords: ["rekt", "down bad", "lost money"],
-  response: "You’re not down bad — you’re just early in your character arc. 📉➡️📈"
-},
-{
-  keywords: ["wtf", "what is this", "bruh", "lol"],
-  response: "UnemployCoin: the only project that’s unhireable on paper but unstoppable in execution."
-},
-{
-  keywords: ["pump", "moon", "when moon", "to the moon"],
-  response: "We don’t promise moonshots — but we do shoot for respect, results, and a little rebellion 🚀"
-},
-{
-  keywords: ["this sucks", "lame", "trash", "boring"],
-  response: "Your opinion is valid and has been filed under 🗑️ /dev/null. Have a better day. 😄"
- }
-];
+  },
+  {
+    keywords: ["wtf", "what is this", "bruh", "lol"],
+    response: "UnemployCoin: the only project that’s unhireable on paper but unstoppable in execution."
+  }, 
+  {
+    keywords: ["pump", "moon", "when moon", "to the moon"],
+    response: "We don’t promise moonshots — but we do shoot for respect, results, and a little rebellion 🚀"
+  },
+  { 
+    keywords: ["this sucks", "lame", "trash", "boring"],
+    response: "Your opinion is valid and has been filed under 🗑️ /dev/null. Have a better day. 😄"
+  }
 
+];
