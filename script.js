@@ -41,5 +41,5 @@ function generateResponse(input) {
       return item.response;
     }
   }
-  return "🤖 I'm your UnemployCoin assistant. Type !help to see what I can answer.";
+  return "Hi! I'm your UnemployCoin assistant. Type !help to see what I can answer.";
 }
