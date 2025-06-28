@@ -138,6 +138,6 @@ const unemploycoinKnowledge = [
 {
   keywords: ["this sucks", "lame", "trash", "boring"],
   response: "Your opinion is valid and has been filed under 🗑️ /dev/null. Have a better day. 😄"
-},
+ }
+];
 
-}
