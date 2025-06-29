@@ -6,7 +6,7 @@ const unemploycoinKnowledge = [
   },
   {
     keywords: ["tokenomics", "supply", "how many coins", "total supply"],
-    response: "🪙 Tokenomics:\n- Total Supply: 1,000,000,000 UNEMP\n- Premine: 10,000,000 UNEMP\n- Decentralized on-chain, with zero hidden taxes or tricks.\n- Built on a Ravencoin-based PoW fork (UnemployCoin Core) and also deployed as an ERC-20 token on Polygon for flexibility."
+    response: "🪙 Tokenomics:\n- Total Supply: 1,000,000,000 UNEMP\n- Premine: 10,000 UNEMP\n- Decentralized on-chain, with zero hidden taxes or tricks.\n- Built on a Ravencoin-based PoW fork (UnemployCoin Core) and also deployed as an ERC-20 token on Polygon for flexibility."
   },
   {
     keywords: ["who created", "creator", "founder"],
