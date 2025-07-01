@@ -77,3 +77,8 @@ body {
   align-self: flex-start;
   background-color: #636e72;
 }
+
+#message:focus {
+  outline: none;
+  box-shadow: none;
+}
