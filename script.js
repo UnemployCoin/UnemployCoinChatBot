@@ -1,3 +1,5 @@
+const API_ENDPOINT = "https://unemploycoinchatbot-api.onrender.com/api/ask";
+
 document.getElementById("sendBtn").addEventListener("click", handleMessage);
 document.getElementById("message").addEventListener("keydown", function (e) {
   if (e.key === "Enter") handleMessage();
@@ -64,7 +66,7 @@ async function generateResponse(input) {
       { role: "system", content: "...your system prompt..." },
       ...chatHistory
     ],
-    model: "mistralai/mixtral-8x7b-instruct:free"
+    model: "deepseek/deepseek-chat-v3-0324:free"
   };
 
   const response = await fetch(API_ENDPOINT, {
