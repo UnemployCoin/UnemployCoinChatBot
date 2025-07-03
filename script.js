@@ -54,3 +54,28 @@ async function generateResponse(input) {
   return data.choices?.[0]?.message?.content || "🤖 No response from AI.";
 }
 
+const chatHistory = [];
+
+async function generateResponse(input) {
+  chatHistory.push({ role: "user", content: input });
+
+  const payload = {
+    messages: [
+      { role: "system", content: "...your system prompt..." },
+      ...chatHistory
+    ],
+    model: "mistralai/mixtral-8x7b-instruct:free"
+  };
+
+  const response = await fetch(API_ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  });
+
+  const data = await response.json();
+  const reply = data.choices?.[0]?.message?.content || "🤖 No response from AI.";
+  chatHistory.push({ role: "assistant", content: reply });
+
+  return reply;
+}
