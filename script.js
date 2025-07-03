@@ -78,7 +78,7 @@ async function generateResponse(input) {
       { role: "system", content: "...your system prompt..." },
       ...chatHistory
     ],
-    model: "deepseek/deepseek-chat-v3-0324:free"
+    model: "mistralai/mistral-small-3.2-24b-instruct:free"
   };
 
   const response = await fetch(API_ENDPOINT, {
