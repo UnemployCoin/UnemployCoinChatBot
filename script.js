@@ -1,5 +1,3 @@
-const API_ENDPOINT = "https://unemploycoinchatbot-api.onrender.com/api/ask";
-
 document.getElementById("sendBtn").addEventListener("click", handleMessage);
 document.getElementById("message").addEventListener("keydown", function (e) {
   if (e.key === "Enter") handleMessage();
