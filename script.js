@@ -43,7 +43,7 @@ function addBotMessage(text) {
 }
 
 async function generateResponse(input) {
-  const response = await fetch('https://your-replit-url.replit.app/api/ask', {
+  const response = await fetch('api/ask'', {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: input })
