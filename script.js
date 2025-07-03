@@ -1,3 +1,5 @@
+const OPENROUTER_API_KEY = "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";
+
 document.getElementById("sendBtn").addEventListener("click", handleMessage);
 document.getElementById("message").addEventListener("keydown", function (e) {
   if (e.key === "Enter") handleMessage();
@@ -42,14 +44,31 @@ function addBotMessage(text) {
   chat.scrollTop = chat.scrollHeight;
 }
 
-// 🧠 Talk to your secure backend (which calls OpenRouter)
 async function generateResponse(input) {
-  const response = await fetch("/api/ask", {
+  const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ message: input })
+    headers: {
+      "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+      "Content-Type": "application/json",
+      "HTTP-Referer": "https://unemploycoin.com",
+      "X-Title": "UnemployCoinChatBot"
+    },
+    body: JSON.stringify({
+      model: "mistralai/mistral-small-3.2-24b-instruct:free",
+      messages: [
+        {
+          role: "system",
+          content: "You are the UnemployCoin assistant. Be helpful, clear, and sometimes funny."
+        },
+        {
+          role: "user",
+          content: input
+        }
+      ],
+      temperature: 0.7
+    })
   });
 
   const data = await response.json();
-  return data.choices?.[0]?.message?.content || "🤖 No response from AI.";
+  return data.choices?.[0]?.message?.content || "🤖 No reply.";
 }
