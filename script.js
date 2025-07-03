@@ -1,3 +1,5 @@
+const API_ENDPOINT = "https://unemploycoinchatbot-api.onrender.com/api/ask";
+
 document.getElementById("sendBtn").addEventListener("click", handleMessage);
 document.getElementById("message").addEventListener("keydown", function (e) {
   if (e.key === "Enter") handleMessage();
@@ -23,6 +25,18 @@ async function handleMessage() {
     chat.lastChild.textContent = "⚠️ AI error: " + error.message;
   }
 }
+
+async function generateResponse(input) {
+  const response = await fetch(API_ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: input })
+  });
+
+  const data = await response.json();
+  return data.choices?.[0]?.message?.content || "🤖 No response from AI.";
+}
+
 
 function addUserMessage(text) {
   const chat = document.getElementById("chat");
