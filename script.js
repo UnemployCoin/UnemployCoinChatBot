@@ -42,6 +42,7 @@ function addBotMessage(text) {
   chat.scrollTop = chat.scrollHeight;
 }
 
+// 🧠 Talk to your secure backend
 async function generateResponse(input) {
   const response = await fetch("https://unemploycoinchatbot.onrender.com/api/ask", {
     method: "POST",
@@ -52,3 +53,4 @@ async function generateResponse(input) {
   const data = await response.json();
   return data.choices?.[0]?.message?.content || "🤖 No response from AI.";
 }
+
