@@ -1,22 +1,28 @@
-require('dotenv').config();
-const express = require('express');
-const fetch = require('node-fetch'); // Use v2.x for CommonJS support
-const bodyParser = require('body-parser');
+import express from "express";
+import fetch from "node-fetch";
+import dotenv from "dotenv";
+
+dotenv.config();
+
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.json());
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
 
-app.post('/api/ask', async (req, res) => {
+app.post("/api/ask", async (req, res) => {
   const { message } = req.body;
 
-  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+  const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: {
       "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
       "Content-Type": "application/json",
-      "HTTP-Referer": "https://unemploycoin.com", // Optional but helps rank usage
+      "HTTP-Referer": "https://unemploycoin.com",
       "X-Title": "UnemployCoinChatBot"
     },
     body: JSON.stringify({
@@ -24,7 +30,7 @@ app.post('/api/ask', async (req, res) => {
       messages: [
         {
           role: "system",
-          content: "You are the official UnemployCoin assistant. Help users understand the project, roadmap, tools, and tokenomics. Keep it helpful, simple, and a little fun."
+          content: "You are the official assistant for UnemployCoin. Help users understand the project, roadmap, community, and goals. Keep it clear, helpful, and occasionally funny."
         },
         {
           role: "user",
@@ -40,5 +46,5 @@ app.post('/api/ask', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`✅ Server running at http://localhost:${port}`);
+  console.log(`✅ Server running on port ${port}`);
 });
