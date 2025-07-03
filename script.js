@@ -44,7 +44,7 @@ function addBotMessage(text) {
 
 // 🧠 Talk to your secure backend
 async function generateResponse(input) {
-  const response = await fetch("https://unemploycoinchatbot.onrender.com/api/ask", {
+  const response = await fetch("https://unemploycoinchatbot-api.onrender.com/api/ask", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: input })
